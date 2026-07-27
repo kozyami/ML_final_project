@@ -1,0 +1,4 @@
+SMS Message,Model,Prediction,timestamp
+Congratulations! You won a free iPhone. Click here to claim your prize now.,Logistic Regression,"{""label"": ""SPAM"", ""confidences"": [{""label"": ""SPAM"", ""confidence"": 0.9944765513540373}, {""label"": ""HAM"", ""confidence"": 0.005523448645962659}]}",2026-07-22 19:44:17.412581
+you won free Iphone 17 pro max 2T,Logistic Regression,"{""label"": ""HAM"", ""confidences"": [{""label"": ""HAM"", ""confidence"": 0.8333556157047999}, {""label"": ""SPAM"", ""confidence"": 0.16664438429520015}]}",2026-07-22 19:48:18.039050
+You win free IPhone 3T ,Logistic Regression,"{""label"": ""SPAM"", ""confidences"": [{""label"": ""SPAM"", ""confidence"": 0.6585251607715874}, {""label"": ""HAM"", ""confidence"": 0.3414748392284126}]}",2026-07-23 19:25:05.834734
