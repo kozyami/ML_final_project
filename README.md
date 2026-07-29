@@ -41,7 +41,6 @@ Winner: **Logistic Regression** (better recall for spam class). Full details in 
 ## File structure
 
 ```
-├── AGENTS.md
 ├── Final-Project-Instructions.txt
 ├── README.md
 ├── requirements.txt
