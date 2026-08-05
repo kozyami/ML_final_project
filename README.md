@@ -11,21 +11,29 @@ Download: `data/SMSSpamCollection`
 
 | Person | Algorithm |
 |--------|-----------|
-| A | Naive Bayes (MultinomialNB) |
-| B | Logistic Regression |
+| kozyami | Naive Bayes (MultinomialNB) |
+| DaraDavit | Logistic Regression |
 
 ## How to run
 
 ```bash
 pip install -r requirements.txt
-jupyter notebook notebooks/
+jupyter notebook notebooks/           # run training notebooks
+python app.py                         # launch Gradio UI (port 7860)
+```
+
+### Docker
+
+```bash
+docker build -t sms-spam-detector .
+docker run -p 7860:7860 sms-spam-detector
 ```
 
 Run notebooks in order:
 
 1. `01_EDA_Preprocessing.ipynb` — exploratory analysis, cleaning, TF-IDF, train/test split
-2. `02a_NaiveBayes.ipynb` — Person A: Naive Bayes with GridSearch
-3. `02b_LogisticRegression.ipynb` — Person B: Logistic Regression with GridSearch
+2. `02a_NaiveBayes.ipynb` — kozyami: Naive Bayes with GridSearch
+3. `02b_LogisticRegression.ipynb` — DaraDavit: Logistic Regression with GridSearch
 4. `03_Comparison.ipynb` — side-by-side comparison, ROC curves, conclusion
 
 ## Results
@@ -41,12 +49,19 @@ Winner: **Logistic Regression** (better recall for spam class). Full details in 
 ## File structure
 
 ```
-├── Final-Project-Instructions.txt
+├── app.py
+├── Dockerfile
 ├── README.md
 ├── requirements.txt
+├── .dockerignore
 ├── .gitignore
 ├── data/
-│   └── SMSSpamCollection
+│   ├── SMSSpamCollection
+│   ├── tfidf_vectorizer.pkl
+│   ├── model_nb.pkl
+│   ├── model_lr.pkl
+│   ├── metrics_nb.pkl
+│   └── metrics_lr.pkl
 └── notebooks/
     ├── 01_EDA_Preprocessing.ipynb
     ├── 02a_NaiveBayes.ipynb
