@@ -52,8 +52,8 @@ Lowercase → strip non-alphabetic characters → tokenize → remove NLTK Engli
 
 | Person | Algorithm |
 |--------|-----------|
-| kozyami | Naive Bayes (MultinomialNB) |
-| DaraDavit | Logistic Regression |
+| Samnang Keo          | Naive Bayes (MultinomialNB) |
+| SovanDara Davit Pich | Logistic Regression |
 
 ## Results
 
